@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>THOR19 Export</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════
+       HEADER
+  ═══════════════════════════════════════════════ -->
+  <div class="panel-header">
+    <div class="panel-title">
+      <span class="title-icon">⬡</span>
+      <span class="title-text">THOR19 Export</span>
+    </div>
+    <div class="panel-subtitle">Illustrator → Blender Vector Bridge</div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════
+       STATUS BAR
+  ═══════════════════════════════════════════════ -->
+  <div class="section">
+    <div class="status-bar" id="statusBar">
+      <span class="status-dot" id="statusDot"></span>
+      <span class="status-text" id="statusText">Initialising…</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════
+       OUTPUT FOLDER
+  ═══════════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-label">Output Folder</div>
+    <div class="folder-row">
+      <div class="folder-path" id="folderPath">
+        <span class="folder-path-placeholder">No folder selected</span>
+      </div>
+      <button class="btn btn-secondary" id="btnSelectFolder" title="Browse for output folder">
+        Browse…
+      </button>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════
+       EXPORT BUTTON
+  ═══════════════════════════════════════════════ -->
+  <div class="section">
+    <button class="btn btn-primary btn-full" id="btnExport" disabled>
+      <span class="btn-icon">▶</span>
+      Export Scene
+    </button>
+    <div class="hint" id="exportHint">Select an output folder to enable export.</div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════
+       RESULT CARD  (hidden until export runs)
+  ═══════════════════════════════════════════════ -->
+  <div class="section" id="resultSection" style="display:none;">
+    <div class="result-card" id="resultCard">
+      <div class="result-header" id="resultHeader"></div>
+      <div class="result-body" id="resultBody"></div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════
+       LOG / PROGRESS
+  ═══════════════════════════════════════════════ -->
+  <div class="section log-section">
+    <div class="section-label">
+      Log
+      <button class="btn-clear" id="btnClearLog" title="Clear log">✕</button>
+    </div>
+    <div class="log-area" id="logArea">
+      <div class="log-entry log-info">Panel loaded. Waiting for action.</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════ -->
+  <div class="panel-footer">
+    v1.0.0 &nbsp;·&nbsp; CEP Extension
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/CSInterface.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
